@@ -1,0 +1,34 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 5rem;
+    color: #fff;
+  }
+  .navbar-brand {
+    font-size: 26px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .user-mail {
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .logout-button {
+    cursor: pointer;
+  }
+  .btn-secondary {
+    background: none;
+    border: none;
+    font-size: 18px;
+  }
+
+.dropdown-toggle .btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd !important;
+}
+.dropdown-item {
+  cursor: pointer;
+}
