@@ -1,0 +1,13 @@
+<section class="container">
+  <div class="row grid-list">
+    <div class="col-lg-3 col-md-3 col-6" *ngFor="let product of productDetails">
+      <div class="product-list"  (click)="onProductDetails(product.id)">
+        <img src="{{ product.thumbnailUrl }}" class="card-img-top" alt="product_image">
+        <div>
+          <h5>{{ product.title }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

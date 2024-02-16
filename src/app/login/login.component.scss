@@ -1,0 +1,16 @@
+.login-page {
+  height: 200px;
+  position: relative;
+}
+.inside-page {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 35%;
+}
+.header {
+  justify-content: center;
+  display: flex;
+}

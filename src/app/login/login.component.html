@@ -1,0 +1,48 @@
+<div class="container login-page">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="inside-page">
+    <h3 class="header">Sign In</h3>
+    <div class="form-group mb-3">
+      <label class="form-label">Email</label>
+      <input
+        type="text"
+        formControlName="email"
+        class="form-control"
+        placeholder="example@gmail.com"
+        [ngClass]="{ 'is-invalid': submitted && formValidates.email.errors }"
+      />
+      <div
+        *ngIf="submitted && formValidates.email.errors"
+        class="invalid-feedback"
+      >
+        <div *ngIf="formValidates.email.errors.required">Email is required</div>
+      </div>
+    </div>
+    <div class="form-group mb-3">
+      <label class="form-label">Mobile Number</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="mobile number"
+        formControlName="mobilenumber"
+        [ngClass]="{
+          'is-invalid': submitted && formValidates.mobilenumber.errors
+        }"
+      />
+      <div
+        *ngIf="submitted && formValidates.mobilenumber.errors"
+        class="invalid-feedback"
+      >
+        <div *ngIf="formValidates.mobilenumber.errors.required">
+          Mobile Number is required
+        </div>
+        <div *ngIf="formValidates.mobilenumber.errors.minlength">
+            Mobile number atlease 10 numbers
+        </div>
+      </div>
+    </div>
+
+    <div class="button">
+      <button type="submit" class="btn btn-primary w-100">SignIn</button>
+    </div>
+  </form>
+</div>
