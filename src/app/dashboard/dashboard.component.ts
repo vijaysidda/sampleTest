@@ -39,24 +39,6 @@ export class DashboardComponent implements OnInit {
     })
   }
 
- @HostListener("window:scroll",["$event"])
- getScroll(event:any) {
-  let remaining = document.documentElement.scrollHeight - 
-  (window.innerHeight + window.pageYOffset);
-  if(Math.round(remaining) < 800 && !this.is_api_loading && !this.is_reached_max) {
-    this.getProducts()
-  }
- }
- onScroll() {
-  this.getProducts()
- }
 
-  onProductDetails(productId:any) {
-    const url = this.route.serializeUrl(
-      this.route.createUrlTree([`layout/product-details/${ productId }`])
-    );
-    window.open(url,'_blank')
-  //  this.route.navigate([`/product-details/${ productId }`])
-  }
 
 }
